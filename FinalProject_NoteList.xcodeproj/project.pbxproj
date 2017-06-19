@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F412D7F31EF88217003CB281 /* NoteDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F412D7F11EF88217003CB281 /* NoteDataModel.xcdatamodeld */; };
 		F41651531EF320AB005DA70E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651521EF320AB005DA70E /* AppDelegate.swift */; };
 		F41651581EF320AB005DA70E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41651561EF320AB005DA70E /* Main.storyboard */; };
 		F416515A1EF320AB005DA70E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41651591EF320AB005DA70E /* Assets.xcassets */; };
 		F416515D1EF320AB005DA70E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F416515B1EF320AB005DA70E /* LaunchScreen.storyboard */; };
 		F41651651EF321F1005DA70E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651641EF321F1005DA70E /* MasterViewController.swift */; };
 		F41651671EF32221005DA70E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651661EF32221005DA70E /* DetailViewController.swift */; };
-		F416516A1EF3231E005DA70E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651691EF3231E005DA70E /* Item.swift */; };
 		F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */; };
 		F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651701EF3815E005DA70E /* AddNoteViewController.swift */; };
 		F4B85D331EF8515F0041A3DB /* stickyNotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B85D321EF8515F0041A3DB /* stickyNotes.png */; };
+		F4B85D381EF85F7E0041A3DB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F412D7F21EF88217003CB281 /* NoteDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F416514F1EF320AB005DA70E /* FinalProject_NoteList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject_NoteList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41651521EF320AB005DA70E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F41651571EF320AB005DA70E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,10 +30,10 @@
 		F416515E1EF320AB005DA70E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F41651641EF321F1005DA70E /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 		F41651661EF32221005DA70E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		F41651691EF3231E005DA70E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewCell.swift; path = ../NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		F41651701EF3815E005DA70E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		F4B85D321EF8515F0041A3DB /* stickyNotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickyNotes.png; sourceTree = "<group>"; };
+		F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,13 @@
 		F41651511EF320AB005DA70E /* FinalProject_NoteList */ = {
 			isa = PBXGroup;
 			children = (
+				F41651521EF320AB005DA70E /* AppDelegate.swift */,
 				F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */,
 				F416516B1EF32324005DA70E /* Models */,
 				F41651681EF3222A005DA70E /* Controllers */,
-				F41651521EF320AB005DA70E /* AppDelegate.swift */,
 				F41651561EF320AB005DA70E /* Main.storyboard */,
 				F41651591EF320AB005DA70E /* Assets.xcassets */,
+				F412D7F11EF88217003CB281 /* NoteDataModel.xcdatamodeld */,
 				F416515B1EF320AB005DA70E /* LaunchScreen.storyboard */,
 				F4B85D321EF8515F0041A3DB /* stickyNotes.png */,
 				F416515E1EF320AB005DA70E /* Info.plist */,
@@ -90,7 +93,7 @@
 		F416516B1EF32324005DA70E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F41651691EF3231E005DA70E /* Item.swift */,
+				F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -169,8 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F416516A1EF3231E005DA70E /* Item.swift in Sources */,
+				F412D7F31EF88217003CB281 /* NoteDataModel.xcdatamodeld in Sources */,
 				F41651671EF32221005DA70E /* DetailViewController.swift in Sources */,
+				F4B85D381EF85F7E0041A3DB /* CoreDataHelper.swift in Sources */,
 				F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */,
 				F41651651EF321F1005DA70E /* MasterViewController.swift in Sources */,
 				F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */,
@@ -343,6 +347,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F412D7F11EF88217003CB281 /* NoteDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F412D7F21EF88217003CB281 /* NoteDataModel.xcdatamodel */,
+			);
+			currentVersion = F412D7F21EF88217003CB281 /* NoteDataModel.xcdatamodel */;
+			path = NoteDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F41651471EF320AB005DA70E /* Project object */;
 }

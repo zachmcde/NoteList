@@ -11,7 +11,7 @@ import CoreData
 
 class AddNoteViewController: UIViewController {
     
-    var items: Item?
+    var items: Notes?
     
     @IBOutlet weak var newNoteTitleTextField: UITextField!
     @IBOutlet weak var newNoteContentTextView: UITextView!
@@ -36,13 +36,21 @@ class AddNoteViewController: UIViewController {
             if identifier == "Save" {
                 print("Save button tapped")
                 
-                    let newNote = Item()
+                    let newNote = Notes()
                     newNote.title = newNoteTitleTextField.text ?? ""
                     newNote.content = newNoteContentTextView.text ?? ""
                     masterViewController.items.append(newNote)
-                
+
             }
+
         }
+        
+        // Save New Note to Core Data
+        let note = self.items ?? CoreDataHelper.newNote()
+        note.title = newNoteTitleTextField.text ?? ""
+        note.content = newNoteContentTextView.text ?? ""
+        CoreDataHelper.saveNote()
+        
     }
 
     // Hide keyboard when user touches outside keyboard

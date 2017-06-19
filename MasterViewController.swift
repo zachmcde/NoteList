@@ -16,11 +16,12 @@ class MasterViewController: UITableViewController {
         static let addNoteViewController = "AddNoteViewController"
     }
 
-    var items = [Item]() {
+    var items = [Notes]() {
         didSet {
             tableView.reloadData()
         }
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,6 +31,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        items = CoreDataHelper.retrieveNotes()
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.tableFooterView = UIView()
         automaticallyAdjustsScrollViewInsets = true
@@ -70,10 +72,17 @@ class MasterViewController: UITableViewController {
     // Override to support editing the table view.
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        
         if editingStyle == .delete {
-            items.remove(at: indexPath.row)
+            
+            CoreDataHelper.delete(note: items[indexPath.row])
+            items = CoreDataHelper.retrieveNotes()
+//            items.remove(at: indexPath.row)
         }
     }
+    
+    
     // Editing Mode
     
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -116,6 +125,13 @@ class MasterViewController: UITableViewController {
             }
         }
     }
+    
+    // Unwind from Detail View Controller,
+    // Unwind from Add Note View Controller
+    
+    @IBAction func unwindToMasterViewController(_ segue: UIStoryboardSegue) {
+        self.items = CoreDataHelper.retrieveNotes()
+    }
 }
 
 extension MasterViewController: UIPopoverPresentationControllerDelegate {
@@ -136,11 +152,5 @@ extension MasterViewController: UIPopoverPresentationControllerDelegate {
         return .fullScreen
     }
 
-    // Unwind from Detail View Controller,
-    // Unwind from Add Note View Controller
-    
-    @IBAction func unwindToMasterViewController(_ segue: UIStoryboardSegue) {
-        
-    }
     
 }

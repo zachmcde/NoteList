@@ -11,7 +11,7 @@ import CoreData
 
 class DetailViewController: UIViewController {
     
-    var items: Item?
+    var items: Notes?
     
 
     @IBOutlet weak var noteTitleTextField: UITextField!
@@ -68,10 +68,15 @@ class DetailViewController: UIViewController {
                     
                 } else {
                     
-                    let newNote = Item()
+                    let newNote = Notes()
                     newNote.title = noteTitleTextField.text ?? ""
                     newNote.content = noteContentTextView.text ?? ""
                     masterViewController.items.append(newNote)
+                    
+                    let note = self.items ?? CoreDataHelper.newNote()
+                    note.title = noteTitleTextField.text ?? ""
+                    note.content = noteContentTextView.text ?? ""
+                    CoreDataHelper.saveNote()
                     
                 }
                 
