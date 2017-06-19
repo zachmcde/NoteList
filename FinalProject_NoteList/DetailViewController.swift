@@ -10,7 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var item: Item?
+    var items: Item? {
+        didSet {
+//            indexPath.row
+        }
+    }
     
 
     @IBOutlet weak var noteTitleTextField: UITextField!
@@ -19,10 +23,10 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let items = item {
+        if let item = items {
           
-            noteTitleTextField.text = items.title
-            noteContentTextView.text = items.text
+            noteTitleTextField.text = item.title
+            noteContentTextView.text = item.content
             
         } else {
         
@@ -33,34 +37,55 @@ class DetailViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
 
-//        if let detailItem = self.item {
-//            navigationItem.title = detailItem.title
-//            noteTitleTextField.text = detailItem.text
-//        }
+        if let detailItem = self.items {
+            navigationItem.title = detailItem.title
+            noteTitleTextField.text = detailItem.content
+        }
     }
 
-    
-    
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+    }
+ 
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    @IBAction func unwindToDetailsViewController(_ segue: UIStoryboardSegue) {
+       let masterViewController = segue.destination as! MasterViewController
         
+        if let identifier = segue.identifier {
+            if identifier == "Done" {
+                print("Done button tapped")
+                
+                if let note = items {
+                
+                note.title = noteTitleTextField.text ?? ""
+                note.content = noteContentTextView.text ?? ""
+                masterViewController.tableView.reloadData()
+                    
+                } else {
+                    
+                    let newNote = Item()
+                    newNote.title = noteTitleTextField.text ?? ""
+                    newNote.content = noteContentTextView.text ?? ""
+                    masterViewController.items.append(newNote)
+                    
+                }
+                
+            }
+        }
     }
-        
+ 
+    // Hide keyboard when user touches outside keyboard
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }

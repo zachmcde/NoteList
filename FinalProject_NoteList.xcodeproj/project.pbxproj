@@ -14,6 +14,8 @@
 		F41651651EF321F1005DA70E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651641EF321F1005DA70E /* MasterViewController.swift */; };
 		F41651671EF32221005DA70E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651661EF32221005DA70E /* DetailViewController.swift */; };
 		F416516A1EF3231E005DA70E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651691EF3231E005DA70E /* Item.swift */; };
+		F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */; };
+		F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651701EF3815E005DA70E /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F41651641EF321F1005DA70E /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
 		F41651661EF32221005DA70E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F41651691EF3231E005DA70E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewCell.swift; path = ../NoteListTableViewCell.swift; sourceTree = "<group>"; };
+		F41651701EF3815E005DA70E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		F41651511EF320AB005DA70E /* FinalProject_NoteList */ = {
 			isa = PBXGroup;
 			children = (
+				F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */,
 				F416516B1EF32324005DA70E /* Models */,
 				F41651681EF3222A005DA70E /* Controllers */,
 				F41651521EF320AB005DA70E /* AppDelegate.swift */,
@@ -74,6 +79,7 @@
 			children = (
 				F41651641EF321F1005DA70E /* MasterViewController.swift */,
 				F41651661EF32221005DA70E /* DetailViewController.swift */,
+				F41651701EF3815E005DA70E /* AddNoteViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 			files = (
 				F416516A1EF3231E005DA70E /* Item.swift in Sources */,
 				F41651671EF32221005DA70E /* DetailViewController.swift in Sources */,
+				F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */,
 				F41651651EF321F1005DA70E /* MasterViewController.swift in Sources */,
+				F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */,
 				F41651531EF320AB005DA70E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
