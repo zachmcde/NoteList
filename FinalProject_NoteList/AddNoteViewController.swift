@@ -7,13 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
 class AddNoteViewController: UIViewController {
-
-//    struct Storyboard {
-//        static let mainStoryboard = "Main"
-//        static let newNoteViewController = "NewNoteViewController"
-//    }
     
     var items: Item?
     
@@ -28,11 +24,10 @@ class AddNoteViewController: UIViewController {
             newNoteContentTextView.text = ""
 
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    
+    // MARK: - Navigation
+    
+    // Segue for save button. Saves new note data and passes it to MasterViewController tableView
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let masterViewController = segue.destination as! MasterViewController
@@ -49,30 +44,7 @@ class AddNoteViewController: UIViewController {
             }
         }
     }
-    
 
-    
-    // MARK: - Navigation
-
-    
-    // UIPopover Delegates
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .fullScreen
-    }
-    
-    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
-        let navigationController = UINavigationController(rootViewController: controller.presentedViewController)
-        let saveButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(AddNoteViewController.dismissAddNoteViewController))
-        navigationController.topViewController?.navigationItem.rightBarButtonItem = saveButton
-        
-        return navigationController
-    }
-    
-    func dismissAddNoteViewController() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     // Hide keyboard when user touches outside keyboard
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -80,3 +52,4 @@ class AddNoteViewController: UIViewController {
     }
 
 }
+

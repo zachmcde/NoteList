@@ -16,6 +16,7 @@
 		F416516A1EF3231E005DA70E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651691EF3231E005DA70E /* Item.swift */; };
 		F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */; };
 		F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651701EF3815E005DA70E /* AddNoteViewController.swift */; };
+		F4B85D331EF8515F0041A3DB /* stickyNotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B85D321EF8515F0041A3DB /* stickyNotes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F41651691EF3231E005DA70E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewCell.swift; path = ../NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		F41651701EF3815E005DA70E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		F4B85D321EF8515F0041A3DB /* stickyNotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickyNotes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				F41651561EF320AB005DA70E /* Main.storyboard */,
 				F41651591EF320AB005DA70E /* Assets.xcassets */,
 				F416515B1EF320AB005DA70E /* LaunchScreen.storyboard */,
+				F4B85D321EF8515F0041A3DB /* stickyNotes.png */,
 				F416515E1EF320AB005DA70E /* Info.plist */,
 			);
 			path = FinalProject_NoteList;
@@ -154,6 +157,7 @@
 			files = (
 				F416515D1EF320AB005DA70E /* LaunchScreen.storyboard in Resources */,
 				F416515A1EF320AB005DA70E /* Assets.xcassets in Resources */,
+				F4B85D331EF8515F0041A3DB /* stickyNotes.png in Resources */,
 				F41651581EF320AB005DA70E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +340,7 @@
 				F41651631EF320AB005DA70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

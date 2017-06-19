@@ -7,14 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     
-    var items: Item? {
-        didSet {
-//            indexPath.row
-        }
-    }
+    var items: Item?
     
 
     @IBOutlet weak var noteTitleTextField: UITextField!
