@@ -42,12 +42,12 @@ class MasterViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return items.count
     }
 
@@ -72,13 +72,11 @@ class MasterViewController: UITableViewController {
     // Override to support editing the table view.
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        
         if editingStyle == .delete {
             
             CoreDataHelper.delete(note: items[indexPath.row])
             items = CoreDataHelper.retrieveNotes()
-//            items.remove(at: indexPath.row)
+            items.remove(at: indexPath.row)
         }
     }
     
@@ -100,13 +98,6 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    
-    // Override to support conditional rearranging of the table view.
-//    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-//
-//        return true
-//    }
-    
     
     // MARK: - Navigation
     
@@ -130,9 +121,12 @@ class MasterViewController: UITableViewController {
     // Unwind from Add Note View Controller
     
     @IBAction func unwindToMasterViewController(_ segue: UIStoryboardSegue) {
-        self.items = CoreDataHelper.retrieveNotes()
+//        self.items = CoreDataHelper.retrieveNotes()
     }
 }
+
+
+    // MARK: - Extension for Popover, AddNoteViewController
 
 extension MasterViewController: UIPopoverPresentationControllerDelegate {
     
@@ -152,5 +146,6 @@ extension MasterViewController: UIPopoverPresentationControllerDelegate {
         return .fullScreen
     }
 
+    
     
 }

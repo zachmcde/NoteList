@@ -16,6 +16,8 @@
 		F41651671EF32221005DA70E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651661EF32221005DA70E /* DetailViewController.swift */; };
 		F416516F1EF33A7E005DA70E /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */; };
 		F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41651701EF3815E005DA70E /* AddNoteViewController.swift */; };
+		F42599171EF9B1970083C443 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42599151EF9B1970083C443 /* Notes+CoreDataClass.swift */; };
+		F42599181EF9B1970083C443 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42599161EF9B1970083C443 /* Notes+CoreDataProperties.swift */; };
 		F4B85D331EF8515F0041A3DB /* stickyNotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B85D321EF8515F0041A3DB /* stickyNotes.png */; };
 		F4B85D381EF85F7E0041A3DB /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		F41651661EF32221005DA70E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewCell.swift; path = ../NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		F41651701EF3815E005DA70E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		F42599151EF9B1970083C443 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F42599161EF9B1970083C443 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4B85D321EF8515F0041A3DB /* stickyNotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickyNotes.png; sourceTree = "<group>"; };
 		F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				F41651521EF320AB005DA70E /* AppDelegate.swift */,
-				F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */,
 				F416516B1EF32324005DA70E /* Models */,
+				F46DC1E51EF88540001A311A /* Helpers */,
+				F46DC1E41EF88534001A311A /* TableView Cell */,
 				F41651681EF3222A005DA70E /* Controllers */,
 				F41651561EF320AB005DA70E /* Main.storyboard */,
 				F41651591EF320AB005DA70E /* Assets.xcassets */,
@@ -93,9 +98,26 @@
 		F416516B1EF32324005DA70E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */,
+				F42599151EF9B1970083C443 /* Notes+CoreDataClass.swift */,
+				F42599161EF9B1970083C443 /* Notes+CoreDataProperties.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F46DC1E41EF88534001A311A /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */,
+			);
+			name = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		F46DC1E51EF88540001A311A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F412D7F31EF88217003CB281 /* NoteDataModel.xcdatamodeld in Sources */,
+				F42599171EF9B1970083C443 /* Notes+CoreDataClass.swift in Sources */,
 				F41651671EF32221005DA70E /* DetailViewController.swift in Sources */,
+				F42599181EF9B1970083C443 /* Notes+CoreDataProperties.swift in Sources */,
 				F4B85D381EF85F7E0041A3DB /* CoreDataHelper.swift in Sources */,
 				F41651711EF3815E005DA70E /* AddNoteViewController.swift in Sources */,
 				F41651651EF321F1005DA70E /* MasterViewController.swift in Sources */,

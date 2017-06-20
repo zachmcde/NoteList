@@ -16,7 +16,6 @@ class CoreDataHelper {
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
     
-    var note = [NSManagedObject] ()
     
     static func newNote() -> Notes {
         let note = NSEntityDescription.insertNewObject(forEntityName: "Notes", into: managedContext) as! Notes
