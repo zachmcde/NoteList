@@ -38,6 +38,7 @@ class DetailViewController: UIViewController {
         
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
+        
 
         if let detailItem = self.items {
             navigationItem.title = detailItem.title

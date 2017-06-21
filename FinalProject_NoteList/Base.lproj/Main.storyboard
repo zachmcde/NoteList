@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,18 +67,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zEN-Yf-UyB">
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="done" id="m17-Bx-uIC">
-                                <connections>
-                                    <segue destination="QQQ-w4-hzR" kind="unwind" identifier="Done" unwindAction="unwindToMasterViewController:" id="dk2-KV-9fp"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="action" id="K7y-H9-BS1">
-                                <connections>
-                                    <action selector="shareButtonTapped:" destination="Ija-3H-Td1" id="Eix-O2-ZiK"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="m17-Bx-uIC">
+                            <connections>
+                                <segue destination="QQQ-w4-hzR" kind="unwind" identifier="Done" unwindAction="unwindToMasterViewController:" id="dk2-KV-9fp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="noteContentTextView" destination="tiq-sj-5lP" id="wtd-4g-D80"/>

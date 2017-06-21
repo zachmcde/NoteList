@@ -45,6 +45,8 @@ class AddNoteViewController: UIViewController {
                         let note = self.items ?? CoreDataHelper.newNote()
                         note.title = newNoteTitleTextField.text ?? ""
                         note.content = newNoteContentTextView.text ?? ""
+                        masterViewController.items.append(note)
+
                         CoreDataHelper.saveNote()
 
             }

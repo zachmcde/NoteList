@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, UISplitViewControllerDelegate {
     
     struct Storyboard {
         static let mainStoryboard = "Main"
@@ -30,15 +30,24 @@ class MasterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        items = CoreDataHelper.retrieveNotes()
+        
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.tableFooterView = UIView()
         automaticallyAdjustsScrollViewInsets = true
         
+        items = CoreDataHelper.retrieveNotes()
+
     }
 
-
+    
+    func splitViewController(
+        _ splitViewController: UISplitViewController,
+        collapseSecondary secondaryViewController: UIViewController,
+        onto primaryViewController: UIViewController) -> Bool {
+        // Return true to prevent UIKit from applying its default behavior
+        return true
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,11 +72,6 @@ class MasterViewController: UITableViewController {
     }
  
     // MARK: - Table view Editing
-    
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//
-//        return true
-//    }
  
     // Override to support editing the table view.
     
@@ -76,7 +80,6 @@ class MasterViewController: UITableViewController {
             
             CoreDataHelper.delete(note: items[indexPath.row])
             items = CoreDataHelper.retrieveNotes()
-            items.remove(at: indexPath.row)
         }
     }
     
@@ -121,7 +124,7 @@ class MasterViewController: UITableViewController {
     // Unwind from Add Note View Controller
     
     @IBAction func unwindToMasterViewController(_ segue: UIStoryboardSegue) {
-//        self.items = CoreDataHelper.retrieveNotes()
+        self.items = CoreDataHelper.retrieveNotes()
     }
 }
 

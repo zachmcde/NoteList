@@ -2,7 +2,7 @@
 //  Notes+CoreDataProperties.swift
 //  FinalProject_NoteList
 //
-//  Created by Zach McDermott on 6/20/17.
+//  Created by Zach McDermott on 6/21/17.
 //  Copyright © 2017 Zach McDermott. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ extension Notes {
         return NSFetchRequest<Notes>(entityName: "Notes")
     }
 
-    @NSManaged public var content: String?
     @NSManaged public var title: String?
+    @NSManaged public var content: String?
 
 }
