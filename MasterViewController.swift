@@ -22,15 +22,17 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         }
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.tableFooterView = UIView()
         automaticallyAdjustsScrollViewInsets = true
@@ -39,14 +41,6 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
 
     }
 
-    
-    func splitViewController(
-        _ splitViewController: UISplitViewController,
-        collapseSecondary secondaryViewController: UIViewController,
-        onto primaryViewController: UIViewController) -> Bool {
-        // Return true to prevent UIKit from applying its default behavior
-        return true
-    }
     
     // MARK: - Table view data source
 
@@ -80,6 +74,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
             
             CoreDataHelper.delete(note: items[indexPath.row])
             items = CoreDataHelper.retrieveNotes()
+
         }
     }
     
@@ -93,13 +88,14 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
             tableView.setEditing(true, animated: true)
         } else {
             tableView.setEditing(false, animated: true)
+            
         }
     }
     
     // Reorder table cells
     
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        self.items = CoreDataHelper.retrieveNotes()
     }
     
     // MARK: - Navigation
@@ -112,9 +108,11 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         if identifier == "displayNotes" {
             print("Table view cell tapped")
             if let indexPath = self.tableView.indexPathForSelectedRow {
+                
                 let item = items[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.items = item
+
             }
             }
         }
@@ -148,7 +146,6 @@ extension MasterViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .fullScreen
     }
-
-    
     
 }
+

@@ -38,7 +38,6 @@ class DetailViewController: UIViewController {
         
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
-        
 
         if let detailItem = self.items {
             navigationItem.title = detailItem.title
@@ -46,9 +45,7 @@ class DetailViewController: UIViewController {
         }
     }
 
-    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
-    }
- 
+
 
     
     // MARK: - Navigation
