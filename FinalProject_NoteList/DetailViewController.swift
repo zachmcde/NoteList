@@ -65,11 +65,6 @@ class DetailViewController: UIViewController {
                     
                 } else {
                     
-//                    let newNote = Notes()
-//                    newNote.title = noteTitleTextField.text ?? ""
-//                    newNote.content = noteContentTextView.text ?? ""
-//                    masterViewController.items.append(newNote)
-                    
                     let note = self.items ?? CoreDataHelper.newNote()
                     note.title = noteTitleTextField.text ?? ""
                     note.content = noteContentTextView.text ?? ""

@@ -22,7 +22,6 @@ class AddNoteViewController: UIViewController {
         
             newNoteTitleTextField.text = ""
             newNoteContentTextView.text = ""
-
     }
     
     // MARK: - Navigation
@@ -36,25 +35,17 @@ class AddNoteViewController: UIViewController {
             if identifier == "Save" {
                 print("Save button tapped")
                 
-//                    let newNote = Notes()
-//                    newNote.title = newNoteTitleTextField.text ?? ""
-//                    newNote.content = newNoteContentTextView.text ?? ""
-//                    masterViewController.items.append(newNote)
+                 // Save New Note to Core Data
                 
-//                 Save New Note to Core Data
                         let note = self.items ?? CoreDataHelper.newNote()
                         note.title = newNoteTitleTextField.text ?? ""
                         note.content = newNoteContentTextView.text ?? ""
                         masterViewController.items.append(note)
 
                         CoreDataHelper.saveNote()
-
             }
 
         }
-        
-
-        
     }
 
     // Hide keyboard when user touches outside keyboard

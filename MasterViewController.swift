@@ -32,7 +32,6 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.tableFooterView = UIView()
         automaticallyAdjustsScrollViewInsets = true
@@ -64,6 +63,8 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
 
         return cell
     }
+    
+
  
     // MARK: - Table view Editing
  
@@ -77,7 +78,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
 
         }
     }
-    
+
     
     // Editing Mode
     
@@ -94,8 +95,18 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
     
     // Reorder table cells
     
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let item = items[sourceIndexPath.row]
+        items.remove(at: sourceIndexPath.row)
+        items.insert(item, at: destinationIndexPath.row)
+        
         self.items = CoreDataHelper.retrieveNotes()
+
     }
     
     // MARK: - Navigation
@@ -113,7 +124,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.items = item
 
-            }
+                }
             }
         }
     }

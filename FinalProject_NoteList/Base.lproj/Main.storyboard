@@ -102,7 +102,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnZ-BY-uza">
                                 <rect key="frame" x="16" y="123" width="359" height="0.5"/>
@@ -248,6 +248,7 @@
         <!--Navigation Controller-->
         <scene sceneID="5FO-iu-sY4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ka-z1-ga9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PWs-i4-1jQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Enx-3e-JV2">
@@ -259,12 +260,11 @@
                         <segue destination="Ija-3H-Td1" kind="relationship" relationship="rootViewController" id="uzN-tj-laI"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ka-z1-ga9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-886" y="949"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kYf-mf-Obc"/>
+        <segue reference="kIS-uV-zaP"/>
     </inferredMetricsTieBreakers>
 </document>

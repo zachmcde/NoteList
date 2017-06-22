@@ -34,8 +34,8 @@
 		F41651661EF32221005DA70E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F416516E1EF33A7E005DA70E /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteListTableViewCell.swift; path = ../NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		F41651701EF3815E005DA70E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
-		F425991D1EFAAE640083C443 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F425991E1EFAAE640083C443 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F425991D1EFAAE640083C443 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notes+CoreDataClass.swift"; path = "../Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F425991E1EFAAE640083C443 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Notes+CoreDataProperties.swift"; path = "../Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4B85D321EF8515F0041A3DB /* stickyNotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stickyNotes.png; sourceTree = "<group>"; };
 		F4B85D371EF85F7E0041A3DB /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,8 +54,6 @@
 		F41651461EF320AB005DA70E = {
 			isa = PBXGroup;
 			children = (
-				F425991D1EFAAE640083C443 /* Notes+CoreDataClass.swift */,
-				F425991E1EFAAE640083C443 /* Notes+CoreDataProperties.swift */,
 				F41651511EF320AB005DA70E /* FinalProject_NoteList */,
 				F41651501EF320AB005DA70E /* Products */,
 			);
@@ -100,6 +98,8 @@
 		F416516B1EF32324005DA70E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F425991D1EFAAE640083C443 /* Notes+CoreDataClass.swift */,
+				F425991E1EFAAE640083C443 /* Notes+CoreDataProperties.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
